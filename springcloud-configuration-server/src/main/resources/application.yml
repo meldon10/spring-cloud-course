@@ -1,0 +1,24 @@
+server:
+  port: 8080
+encrypt:
+  key: PrxM*E+cDe6G6hwn6nfshKVUB8VAE7I42)I72$Z#
+spring:
+  security:
+    user:
+      name: Meldon
+      password: Password
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/meldon10/spring-cloud-course-configuration
+          search-paths :
+            - station*
+          repos:
+            perf:
+              pattern : '*/perf'
+              uri: https://github.com/meldon10/spring-cloud-configuration-perf
+              search-paths:
+                - station*
